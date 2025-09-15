@@ -1,4 +1,4 @@
-# 🧠 SYNTHIE v1.2
+# 🧠 SYNTHIE v1.3
 
 **SYNTHIE** is a structured, LLM-native script for researchers, strategists, and product teams analyzing qualitative feedback or mixed-methods data.
 
