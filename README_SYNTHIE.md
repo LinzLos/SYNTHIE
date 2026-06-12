@@ -1,4 +1,4 @@
-# 🧠 SYNTHIE v1.2
+# 🧠 SYNTHIE v1.3
 
 **SYNTHIE** is a structured, LLM-native script designed to support **researchers, strategists, and insight teams** working with transcripts, quotes, or field data.  
 It works seamlessly inside tools like ChatGPT, Claude, Gemini, or even your internal apps.
