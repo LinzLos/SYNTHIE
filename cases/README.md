@@ -31,13 +31,18 @@ NNN-short-slug/
 | 001-outlier-as-theme | missed | caught |
 | 002-quantifier-overreach | missed | caught |
 | 003-quote-misattribution | missed | caught |
+| 004-fabricated-claim | missed | caught |
+| 005-coverage-overreach | missed | caught |
 
 > Caveats: (1) these traps were authored alongside the v1.4 invariants they
 > exercise, so a "caught" confirms the invariant *fires when the structure is
 > present* — not an independent audit. (2) v1.3 is scored "missed" on structural
 > grounds (no evidence ledger, none of these invariants, relevant feedback
 > optional/off), not a separate run. A real-world miss would be a stronger
-> fixture than a designed trap.
+> fixture than a designed trap. (3) 004 (`evidence-traceability`) and 005
+> (`coverage-honesty`) were added 2026-06-14 to close the two v1.4 invariants
+> that previously had no regression trap; their v1.4 "caught" is a structural
+> score (the invariant is present and on-point), pending an independent run.
 
 ## Adding a case
 
