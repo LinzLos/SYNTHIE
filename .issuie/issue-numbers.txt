@@ -1,0 +1,6 @@
+T01 -> https://github.com/LinzLos/SYNTHIE/issues/1
+T02 -> https://github.com/LinzLos/SYNTHIE/issues/2
+T03 -> https://github.com/LinzLos/SYNTHIE/issues/3
+T04 -> https://github.com/LinzLos/SYNTHIE/issues/4
+T05 -> https://github.com/LinzLos/SYNTHIE/issues/5
+TRACKING -> https://github.com/LinzLos/SYNTHIE/issues/6
