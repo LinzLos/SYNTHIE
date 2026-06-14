@@ -46,4 +46,4 @@ SYNTHIE's passes operationalize standard qualitative-analysis practice — quote
 
 ---
 
-SYNTHIE is an adaptation of [FLOWIE](../FLOWIE) by Lindsay Zuñiga. Please credit when remixing or building further. Feedback welcome → [linkedin.com/in/zunigo](https://www.linkedin.com/in/zunigo)
+❤️ SYNTHIE is an adaptation of [FLOWIE](../FLOWIE) by Lindsay Zuñiga. Please credit when remixing or building further. Feedback welcome → [linkedin.com/in/zunigo](https://www.linkedin.com/in/zunigo)
