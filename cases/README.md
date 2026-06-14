@@ -28,9 +28,16 @@ NNN-short-slug/
 
 | Case | v1.3 | v1.4 |
 |------|------|------|
-| 001-outlier-as-theme | — | — |
-| 002-quantifier-overreach | — | — |
-| 003-quote-misattribution | — | — |
+| 001-outlier-as-theme | missed | caught |
+| 002-quantifier-overreach | missed | caught |
+| 003-quote-misattribution | missed | caught |
+
+> Caveats: (1) these traps were authored alongside the v1.4 invariants they
+> exercise, so a "caught" confirms the invariant *fires when the structure is
+> present* — not an independent audit. (2) v1.3 is scored "missed" on structural
+> grounds (no evidence ledger, none of these invariants, relevant feedback
+> optional/off), not a separate run. A real-world miss would be a stronger
+> fixture than a designed trap.
 
 ## Adding a case
 
