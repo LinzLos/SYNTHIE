@@ -1,4 +1,4 @@
-# 🧠 SYNTHIE v1.4
+# 🧠 SYNTHIE v1.5
 
 SYNTHIE is a structured, versioned, machine-readable reference that an agent reads to synthesize qualitative research — tagging quotes, mapping them to research questions, clustering themes, and producing stakeholder-ready findings **without presenting an insight the data doesn't support.**
 
@@ -14,6 +14,7 @@ A single structured script (`.xml` + `.txt`, see `manifest.json` for the current
 - **Keeps coverage honest** — in multi-transcript mode, states how much of the input was actually analyzed and marks the rest unverified, instead of implying representativeness it can't back.
 - **Outputs an evidence contract** — each insight with its supporting quote ids and a strength expressed as a count (`theme X — 4 of 9 — q3, q7, q12, q20`), so a stakeholder can audit the chain from claim to evidence.
 - **Maps RQs, workflows, pain points, and recommendations**, overlays quantitative data for mixed-methods, and exports structured output for Notion, Airtable, JSON, or Markdown.
+- **Audits existing syntheses, not just transcripts** — a `source-fidelity` mode (`raw` | `derived`) lets SYNTHIE review a teammate's or vendor's report against its own quoted evidence. On derived input, attribution is marked "trusts upstream synthesis" and confidence is downgraded rather than silently asserted.
 
 It's also a clean teaching reference — the evidence ledger and invariants make the *reasoning* legible, which is exactly what junior researchers need to see modeled.
 
@@ -34,6 +35,7 @@ The `.xml` and `.txt` are the same script in two renderings — the `.txt` just 
 ## 🛠 Features
 
 - **Evidence ledger + invariants** — traceability, attribution integrity, quantifier↔count parity, outlier surfacing.
+- **Source-fidelity mode** — audit a derived synthesis (report, coded sheet, deck) with attribution trusted-not-verified and coverage scoped to the document.
 - **Traceability check + coverage-honesty pass** — no unsupported claims, no overstated coverage.
 - **Auditable evidence contract** — claim → count → quote ids.
 - **Regression cases** in [`cases/`](cases/) — designed traps (outlier-as-theme, quantifier overreach, misattribution) so each version can be scored against the last.

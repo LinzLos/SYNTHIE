@@ -34,6 +34,12 @@ NNN-short-slug/
 | 004-fabricated-claim | missed | caught |
 | 005-coverage-overreach | missed | caught |
 
+> v1.5 has no column: its changes are packaging (#1), a derived-input mode (#2)
+> whose clauses are all conditional on `source-fidelity: derived`, and copy (#3),
+> so the raw-transcript path is unchanged and v1.4's scores carry. The derived
+> path has no case yet — issue #5 (the real-world Surface B fixture) is the
+> first candidate.
+
 > Caveats: (1) these traps were authored alongside the v1.4 invariants they
 > exercise, so a "caught" confirms the invariant *fires when the structure is
 > present* — not an independent audit. (2) v1.3 is scored "missed" on structural
