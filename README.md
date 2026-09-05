@@ -27,7 +27,9 @@ The script lives in [`scripts/versions/`](scripts/versions/); `manifest.json` al
 
 **Primary — reference it from an agent.** Point your agent at the current script file and have it run SYNTHIE's passes over your research data. Because it's versioned, the agent always reads the same defined method, and updates propagate by bumping the version.
 
-**Fallback — paste it into a chat.** If you don't have an agent set up, upload the `.txt` or `.xml` to any LLM and say *"Use this SYNTHIE script to analyze my interview transcripts."* It will prompt you for anything it needs and let you start at any task. This is the manual path — fine to start with, but the structure exists so you can automate past it.
+**Fallback — paste it into a chat.** If you don't have an agent set up, upload the current `.txt` to any LLM and say *"Use this SYNTHIE script to analyze my interview transcripts."* The `.txt` opens with a short plain-language usage note, followed by the full script; it will prompt you for anything it needs and let you start at any task. This is the manual path — fine to start with, but the structure exists so you can automate past it.
+
+The `.xml` and `.txt` are the same script in two renderings — the `.txt` just adds the usage preamble. [`scripts/check_parity.sh`](scripts/check_parity.sh) verifies they haven't drifted; run it before cutting a release.
 
 ## 🛠 Features
 
