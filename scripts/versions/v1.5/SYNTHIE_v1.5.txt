@@ -30,7 +30,7 @@ Usage: Upload this file (or the .txt rendering) to any LLM and say "Use this SYN
   <version number="1.2" date="2025-07-22">Integrated support for mixed-methods research, including optional quantitative data inputs and synthesis overlays.</version>
   <version number="1.3" date="2025-09-15">Added batch analysis support, clarified quote-tagging modes, introduced comparative insights as a standalone task, added reflective/assistant feedback modes, expanded workflow difference handling, and renamed onboarding modes to Guided Walkthrough + Quick-Start.</version>
   <version number="1.4" date="2026-06-13">Added an evidence ledger (every insight grounds in a real, attributed quote), synthesis invariants (traceability, attribution integrity, quantifier↔count parity, outlier surfacing), a coverage-honesty pass for batch synthesis, and an auditable evidence-contract output. SYNTHIE's analog of FLOWIE v2.6's invariant/coupling work: it stops the tool from presenting an insight the data doesn't support.</version>
-  <version number="1.5" date="2026-09-05">Shipped a real paste-ready .txt rendering: the .txt now opens with a plain-language usage preamble before the full XML body (same method, two faithful renderings), guarded by scripts/check_parity.sh so the pair cannot drift. Also made the .xml well-formed (block references inside step labels are now escaped, as in FLOWIE), so XML parsers accept it. Added a source-fidelity mode (raw vs derived): SYNTHIE can now audit an existing synthesis — a report, coded sheet, or deck — and, on derived input, marks attribution as "trusts upstream synthesis", downgrades confidence, and scopes coverage to the document rather than the study. Raw-transcript behaviour is unchanged.</version>
+  <version number="1.5" date="2026-09-05">Shipped a real paste-ready .txt rendering: the .txt now opens with a plain-language usage preamble before the full XML body (same method, two faithful renderings), guarded by scripts/check_parity.sh so the pair cannot drift. Also made the .xml well-formed (block references inside step labels are now escaped, as in FLOWIE), so XML parsers accept it. Added a source-fidelity mode (raw vs derived): SYNTHIE can now audit an existing synthesis — a report, coded sheet, or deck — and, on derived input, marks attribution as "trusts upstream synthesis", downgrades confidence, and scopes coverage to the document rather than the study. Raw-transcript behaviour is unchanged. Replaced the lending-domain comparison examples inherited from FLOWIE with domain-neutral placeholders.</version>
 </versionhistory>
 
 <initialize>
@@ -69,7 +69,7 @@ Usage: Upload this file (or the .txt rendering) to any LLM and say "Use this SYN
     <task id="quote-tagging" description="Extract and tag quotes. Optionally generate aggregated tags across transcripts." />
     <task id="rq-mapping" description="Map quotes to research questions." />
     <task id="workflow" description="Describe participant workflows." />
-    <task id="comparative" description="Compare across transcripts, loan types, or roles. Highlight differences and overlaps." />
+    <task id="comparative" description="Compare across transcripts, segments, or roles. Highlight differences and overlaps." />
     <task id="painpoints" description="Cluster pain points." />
     <task id="recommendations" description="Recommend improvements." />
     <task id="report-export" description="Export structured report." />
@@ -98,9 +98,11 @@ Usage: Upload this file (or the .txt rendering) to any LLM and say "Use this SYN
     <option name="derived">An upstream synthesis — a teammate's or vendor's report, a coded spreadsheet, a summary deck, another tool's output. Quotes and attribution are as the upstream author reported them. Every pass below that says "on derived input" applies.</option>
   </sourcefidelity>
 
+  <!-- Optional comparison dimensions. Fill in the segments that matter for THIS
+       study; leave empty for a single-group synthesis. -->
   <differences optional="true">
-    <dimension name="Loan Type" description="Contrast relocation vs retail workflows" />
-    <dimension name="Role" description="Compare banker vs ops perspectives" />
+    <dimension name="[SEGMENT_DIMENSION]" description="[e.g., contrast workflow type A vs workflow type B]" />
+    <dimension name="[ROLE_DIMENSION]" description="[e.g., compare role X vs role Y perspectives]" />
   </differences>
 
   <reflectionmode optional="true">
@@ -193,7 +195,7 @@ Usage: Upload this file (or the .txt rendering) to any LLM and say "Use this SYN
   <step label="In &lt;evidenceledger&gt;, before synthesizing, extract candidate quotes as the substrate everything else cites: give each an id, the verbatim text, its source/participant, and its fidelity (raw | derived). Every later insight must reference these ids. Do not introduce claims that aren't anchored here. On derived input, the source is the upstream document and the participant is as that document attributes it; paraphrases the document presents as findings without a quote are not ledger entries — they are claims to be audited." />
   <step label="In &lt;answers&gt;, map quotes to research questions and synthesize takeaways — each citing evidenceledger ids. Permit looping back to tagging or RQ editing." />
   <step label="In &lt;workflowdescription&gt;, outline typical participant steps and tools." />
-  <step label="In &lt;comparativeinsight&gt;, contrast sub-groups, loan types, or roles. Surface disconfirming and minority cases per the outlier-surfacing invariant." />
+  <step label="In &lt;comparativeinsight&gt;, contrast sub-groups, segments, or roles as defined in &lt;differences&gt;. Surface disconfirming and minority cases per the outlier-surfacing invariant." />
   <step label="In &lt;painpoints&gt;, cluster frustrations or inefficiencies. Group by workflow phase or software interaction. Each cluster cites its supporting quote ids." />
   <step label="In &lt;designopportunities&gt;, suggest UX/product improvements based on pain points. Prioritize if possible. Each recommendation traces to the pain point and quotes it addresses." />
   <step label="In &lt;traceabilitycheck&gt;, audit the synthesis against &lt;invariants&gt;: confirm every theme/insight/pain point/recommendation cites a real evidenceledger id, confirm attribution is correct, and correct any strength language to match the actual count. Flag and remove or downgrade any claim that fails. On derived input, record attribution-integrity as 'trusts upstream synthesis (unverified)' rather than 'confirmed', downgrade the confidence of every claim accordingly, and additionally audit the document against itself: flag any finding it states without a quote, any quantifier its own counts don't support, and any coverage it implies but doesn't evidence." />
