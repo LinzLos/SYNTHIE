@@ -197,6 +197,9 @@ carrying the report's coverage language forward without its own caveats.
 > Hypothesis: a "same as last week" shortcut will reduce weekly logging load and
 > improve sustained participation beyond the first two weeks.
 
+*(The source report's numbering runs 8 → 10; there is no Finding 9 in the
+delivered document.)*
+
 ### Findings 10 · P2 and 11 · P2 — Admin terminology and list density
 
 > **Finding 10.** P6 (CFO) identified friction with the status label "Pending";
@@ -248,6 +251,8 @@ carrying the report's coverage language forward without its own caveats.
 
 > **R4 findings → shipped.** Every actionable finding from the R4 report for
 > the admin surface (Surface B) is built and merged. 24 issues closed.
+> *(Notation: "F5" = Finding 5; "p17 #4" = page 17, bullet 4 of the report —
+> the page holding Findings 10/11. Neither refers to the open-questions list.)*
 >
 > | Finding surfaced | What shipped |
 > |---|---|

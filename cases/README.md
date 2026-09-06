@@ -36,7 +36,7 @@ NNN-short-slug/
 | 003-quote-misattribution | missed | caught | — |
 | 004-fabricated-claim | missed | caught | — |
 | 005-coverage-overreach | missed | caught | — |
-| 006-second-order-audit | — | — | — |
+| 006-second-order-audit | — | — | caught |
 
 > v1.5 on 001–005 is "—": its changes are packaging (#1), a derived-input mode
 > (#2) whose clauses are all conditional on `source-fidelity: derived`, and copy
@@ -48,9 +48,28 @@ NNN-short-slug/
 > participant forward as an established need. It is the first fixture for the
 > v1.5 `source-fidelity: derived` path and for the derived clauses of
 > `attribution-integrity`, `coverage-honesty`, and `evidence-traceability`. v1.3
-> and v1.4 have no derived mode. All columns stay "—" until a **blind run** —
-> the executing agent given only the script and `input.md`, never
-> `expected.md`. Fill from a real run, not a guess.
+> and v1.4 have no derived mode.
+>
+> **v1.5 scored caught on a blind run (2026-09-06)** — the first non-structural
+> score in this log. Protocol: a fresh agent given only the script and
+> `input.md` pasted into its prompt, no tools, no file access, never
+> `expected.md`. Verbatim output in `006-second-order-audit/runs/`. It inferred
+> derived mode unprompted, marked every attribution "trusts upstream
+> synthesis", reported document and study coverage separately, named Finding
+> 8's P0-on-one-participant against the report's own open question, flagged
+> the roadmap's "as requested by P2" and the shipped nudge as n=1 promotions,
+> replaced "widespread" with a count, and caught the unattributed quote and
+> the "both implied" inference. Beyond the rubric it corrected the Surface B
+> denominator (P3 never tested the admin surface, so "3 of 6" is really 3 of
+> 5) and noticed the source's own numbering gap (8 → 10). Caveats: (1) it
+> cited open question 2 but not the goal table's INCONCLUSIVE verdict, and did
+> not name P3 as a founder standing in for an employee; (2) it labels every
+> paraphrased-but-participant-named finding "unsupported-in-source", the same
+> tag it gives findings with no participant at all — Findings 3/4/5 were kept
+> as the strongest tier, so not a false positive, but the label is doing
+> double duty (script follow-up); (3) one wrong inference, reading the
+> tracking doc's "p17 #5" as open question 5 — a fixture ambiguity, since
+> `input.md` did not say the notation means page/bullet; fixed in the input.
 
 > Caveats: (1) these traps were authored alongside the v1.4 invariants they
 > exercise, so a "caught" confirms the invariant *fires when the structure is

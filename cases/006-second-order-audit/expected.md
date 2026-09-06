@@ -56,6 +56,16 @@ own quoted evidence and counts support, and where its language outruns them.
 - **Findings 3, 4, 5 are not flagged.** Their counts are honest; firing on them
   is a false positive.
 
+## Also creditable (found on the first blind run, not planted)
+
+- **Denominator correction.** P3 never tested the admin surface, so every
+  Surface B count "of 6" is really of 5 admin participants. The report's
+  honest-looking "3 of 6" is still the wrong fraction.
+- **Severity-tag inconsistency.** Findings 1 and 7 are rated P1 but carry P0
+  recommendations.
+- **The source's own numbering gap** (Findings 8 → 10) reported as a coverage
+  gap rather than silently skipped.
+
 ## Score "partial" if
 
 - It runs as if the input were raw, but still catches Finding 8's n=1 problem.
@@ -63,6 +73,9 @@ own quoted evidence and counts support, and where its language outruns them.
   verdict or the downstream consequence.
 - It notes "small sample" generically without naming which findings rest on
   one participant, or it downgrades everything uniformly (including 3, 4, 5).
+  *Labeling* 3/4/5 "no quote in source" while still tiering them above the
+  n=1 items is acceptable — the report genuinely quotes no one for them; what
+  is not acceptable is treating them like the single-participant promotions.
 
 ## Score "missed" if
 
