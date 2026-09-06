@@ -36,13 +36,26 @@ NNN-short-slug/
 | 003-quote-misattribution | missed | caught | — | — |
 | 004-fabricated-claim | missed | caught | — | — |
 | 005-coverage-overreach | missed | caught | — | — |
-| 006-second-order-audit | — | — | caught | — |
+| 006-second-order-audit | — | — | caught | caught |
 
 > v1.7 has no column: it was a licensing-only release with no behavioral change
 > from v1.6, so v1.6's scores carry.
 >
 > v1.6 changes only the derived-input clauses (evidence ladder, persona-mismatch
-> note), so 001–005 carry from v1.4 and 006 stays "—" until a blind v1.6 run.
+> note), so 001–005 carry from v1.4. **006 scored caught on a blind v1.6 run
+> (2026-09-06)**, same protocol as the v1.5 run, output in
+> `006-second-order-audit/runs/`. Both v1.6 changes did what they were cut to
+> do: the ladder reserved "unsupported-in-source" for the 3 of 17
+> recommendations with no participant named and carried the paraphrased
+> findings at their count (Findings 3/4/5 graded "paraphrased, Low", not
+> discarded); the persona clause produced an explicit "P3 is a founder standing
+> in for an employee — coverage gap, not a data point." It also read the p17
+> notation correctly after the fixture fix. New beyond the rubric: 11 of 17
+> admin recommendations involve P5 and 5 rest on P5 alone; actual-vs-budget
+> tracking (2 of 5) is the one evidenced need with no recommendation. Remaining
+> caveat: it still argues Finding 8's P0 from open question 2 and the persona
+> gap rather than citing the goal table's own INCONCLUSIVE verdict — a valid
+> route, so not held against the score.
 >
 > v1.5 on 001–005 is "—": its changes are packaging (#1), a derived-input mode
 > (#2) whose clauses are all conditional on `source-fidelity: derived`, and copy
