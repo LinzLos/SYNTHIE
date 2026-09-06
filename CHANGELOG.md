@@ -3,9 +3,17 @@
 All notable changes to SYNTHIE are documented here. Versions track the script
 in `scripts/versions/`; `manifest.json` always points at the current release.
 
+## [1.7] — 2026-09-06
+
+- Licensing cleanup only — the repo moves from CC0 to **CC BY 4.0**, matching
+  FLOWIE, and the script's attribution block now states that license (use,
+  adapt, and share with credit). The former "please credit" line contradicted
+  the CC0 LICENSE file, which waives attribution. No behavioral change from
+  1.6; case scores carry. Mirrors FLOWIE v2.8.
+
 ## [1.6] — 2026-09-06
 
-- Current release. Derived-input refinements from the first **blind run** of
+- Derived-input refinements from the first **blind run** of
   case 006 (scored caught under v1.5 on 2026-09-06; run saved under
   `cases/006-second-order-audit/runs/`).
 - **Three-level evidence ladder on derived input** — `evidence-traceability`

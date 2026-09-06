@@ -38,6 +38,9 @@ NNN-short-slug/
 | 005-coverage-overreach | missed | caught | — | — |
 | 006-second-order-audit | — | — | caught | — |
 
+> v1.7 has no column: it was a licensing-only release with no behavioral change
+> from v1.6, so v1.6's scores carry.
+>
 > v1.6 changes only the derived-input clauses (evidence ladder, persona-mismatch
 > note), so 001–005 carry from v1.4 and 006 stays "—" until a blind v1.6 run.
 >

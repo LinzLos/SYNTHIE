@@ -1,4 +1,4 @@
-# 🧠 SYNTHIE v1.6
+# 🧠 SYNTHIE v1.7
 
 SYNTHIE is a structured, versioned, machine-readable reference that an agent reads to synthesize qualitative research — tagging quotes, mapping them to research questions, clustering themes, and producing stakeholder-ready findings **without presenting an insight the data doesn't support.**
 
@@ -50,4 +50,4 @@ SYNTHIE's passes operationalize standard qualitative-analysis practice — quote
 
 ---
 
-❤️ SYNTHIE is an adaptation of [FLOWIE](https://github.com/LinzLos/FLOWIE) by Lindsay Zuñiga. Please credit when remixing or building further. Feedback welcome → [linkedin.com/in/zunigo](https://www.linkedin.com/in/zunigo)
+❤️ SYNTHIE is an adaptation of [FLOWIE](https://github.com/LinzLos/FLOWIE), both by Lindsay Zuñiga. Licensed [CC BY 4.0](LICENSE) — use, adapt, remix, and share freely; just credit the author. Feedback welcome → [linkedin.com/in/zunigo](https://www.linkedin.com/in/zunigo)
