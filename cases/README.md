@@ -29,15 +29,18 @@ NNN-short-slug/
 
 ## Scoring log
 
-| Case | v1.3 | v1.4 | v1.5 |
-|------|------|------|------|
-| 001-outlier-as-theme | missed | caught | — |
-| 002-quantifier-overreach | missed | caught | — |
-| 003-quote-misattribution | missed | caught | — |
-| 004-fabricated-claim | missed | caught | — |
-| 005-coverage-overreach | missed | caught | — |
-| 006-second-order-audit | — | — | caught |
+| Case | v1.3 | v1.4 | v1.5 | v1.6 |
+|------|------|------|------|------|
+| 001-outlier-as-theme | missed | caught | — | — |
+| 002-quantifier-overreach | missed | caught | — | — |
+| 003-quote-misattribution | missed | caught | — | — |
+| 004-fabricated-claim | missed | caught | — | — |
+| 005-coverage-overreach | missed | caught | — | — |
+| 006-second-order-audit | — | — | caught | — |
 
+> v1.6 changes only the derived-input clauses (evidence ladder, persona-mismatch
+> note), so 001–005 carry from v1.4 and 006 stays "—" until a blind v1.6 run.
+>
 > v1.5 on 001–005 is "—": its changes are packaging (#1), a derived-input mode
 > (#2) whose clauses are all conditional on `source-fidelity: derived`, and copy
 > (#3), so the raw-transcript path is unchanged and v1.4's scores carry.

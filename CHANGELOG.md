@@ -3,9 +3,27 @@
 All notable changes to SYNTHIE are documented here. Versions track the script
 in `scripts/versions/`; `manifest.json` always points at the current release.
 
+## [1.6] — 2026-09-06
+
+- Current release. Derived-input refinements from the first **blind run** of
+  case 006 (scored caught under v1.5 on 2026-09-06; run saved under
+  `cases/006-second-order-audit/runs/`).
+- **Three-level evidence ladder on derived input** — `evidence-traceability`
+  now grades each claim *quoted* / *paraphrased* (participants named, no quote;
+  carried, downgraded one step) / *unsupported-in-source* (no participant
+  named; not carried). The v1.5 run used "unsupported-in-source" for both of
+  the last two, so an honest "3 of 6 (P2, P5, P6)" finding wore the same label
+  as a claim nobody was recorded making. The traceability check and evidence
+  contract carry the grade.
+- **Persona-mismatch coverage note** — `coverage-honesty` on derived input now
+  states when a track's only participant is not the persona the track tests
+  (the run reported "Track B+C: 1 participant" but not that P3 was a founder
+  standing in for an employee).
+- Raw-transcript path unchanged from 1.4.
+
 ## [1.5] — 2026-09-05
 
-- Current release. Packaging and second-order-audit release; the raw-transcript
+- Packaging and second-order-audit release; the raw-transcript
   synthesis path is unchanged from 1.4.
 - **Paste-ready `.txt`** (#1) — the `.txt` now opens with a plain-language usage
   preamble before the full script, instead of being a byte-for-byte copy of the

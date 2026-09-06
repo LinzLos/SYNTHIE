@@ -1,4 +1,4 @@
-# 🧠 SYNTHIE v1.5
+# 🧠 SYNTHIE v1.6
 
 SYNTHIE is a structured, versioned, machine-readable reference that an agent reads to synthesize qualitative research — tagging quotes, mapping them to research questions, clustering themes, and producing stakeholder-ready findings **without presenting an insight the data doesn't support.**
 
@@ -14,7 +14,7 @@ A single structured script (`.xml` + `.txt`, see `manifest.json` for the current
 - **Keeps coverage honest** — in multi-transcript mode, states how much of the input was actually analyzed and marks the rest unverified, instead of implying representativeness it can't back.
 - **Outputs an evidence contract** — each insight with its supporting quote ids and a strength expressed as a count (`theme X — 4 of 9 — q3, q7, q12, q20`), so a stakeholder can audit the chain from claim to evidence.
 - **Maps RQs, workflows, pain points, and recommendations**, overlays quantitative data for mixed-methods, and exports structured output for Notion, Airtable, JSON, or Markdown.
-- **Audits existing syntheses, not just transcripts** — a `source-fidelity` mode (`raw` | `derived`) lets SYNTHIE review a teammate's or vendor's report against its own quoted evidence. On derived input, attribution is marked "trusts upstream synthesis" and confidence is downgraded rather than silently asserted.
+- **Audits existing syntheses, not just transcripts** — a `source-fidelity` mode (`raw` | `derived`) lets SYNTHIE review a teammate's or vendor's report against its own quoted evidence. On derived input, attribution is marked "trusts upstream synthesis" and confidence is downgraded rather than silently asserted. Each claim is graded quoted / paraphrased / unsupported-in-source, so a report's honest paraphrase is downgraded, not discarded.
 
 It's also a clean teaching reference — the evidence ledger and invariants make the *reasoning* legible, which is exactly what junior researchers need to see modeled.
 
