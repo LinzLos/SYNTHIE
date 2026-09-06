@@ -56,3 +56,19 @@ None.
 3. **#3** is low-risk polish — fold into the same v1.5 branch.
 4. **#5** can run independent of the version work — turns today's real audit into the
    repo's first non-designed fixture (stronger than a trap, per cases/README's own note).
+
+---
+
+# Backlog map — post-v1.7 (2026-09-06)
+
+v1.5 backlog closed (#1–#6). New wave from the 2026-09-05/06 sessions: the
+operator is the last unbuilt sentence in the README's "Where it's going".
+
+| # | Type · Pri | Title | Touches | Depends on |
+|---|---|---|---|---|
+| #7 | feat · **P1** | Build the SYNTHIE operator: subagent + sweep + blind-run mode | `.claude/agents/synthie.md`, `scripts/synthie-sweep.sh`, `operator/*`, `README.md`, `cases/README.md` | — |
+| #8 | feat · P2 | Theme-drift detection between sweeps (`evidence-persistence` invariant, case 007) | `scripts/versions/v1.8/*`, `scripts/synthie-drift.sh`, `cases/007-*` | #7 |
+
+Sequence: #7 → #8. Independent of both: the pending real-transcript blind
+run of v1.7 (raw path, first real material), whose misses may claim case 007
+first — renumber #8's case if so.
