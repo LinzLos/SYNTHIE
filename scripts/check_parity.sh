@@ -29,6 +29,22 @@ fi
 [ -f "$txt" ] || { echo "parity FAIL: missing $txt (check manifest.json)"; exit 1; }
 grep -q '^<?xml' "$txt" || { echo "parity FAIL: no <?xml line in $txt — preamble must be followed by the full XML body"; exit 1; }
 
+# Well-formedness: a release must be parseable XML. The diff below only proves
+# the two files match — it would happily pass a matched pair that no parser can
+# read (a stray double quote inside a step label is the easy way to do this).
+if command -v xmllint >/dev/null 2>&1; then
+  if ! xmllint --noout "$xml" 2>/tmp/parity_xmllint.$$; then
+    echo "parity FAIL: $xml is not well-formed XML:"
+    sed -n '1,10p' /tmp/parity_xmllint.$$
+    rm -f /tmp/parity_xmllint.$$
+    exit 1
+  fi
+  rm -f /tmp/parity_xmllint.$$
+  echo "xml OK: $xml is well-formed"
+else
+  echo "parity WARN: xmllint not found — skipping the well-formedness check"
+fi
+
 # The .txt body is everything from its "<?xml" line onward.
 if awk '/^<\?xml/{f=1} f' "$txt" | diff -u - "$xml"; then
   echo "parity OK: $xml matches the $txt body"

@@ -37,10 +37,23 @@ NNN-short-slug/
 | 004-fabricated-claim | missed | caught | — | — | — |
 | 005-coverage-overreach | missed | caught | — | — | — |
 | 006-second-order-audit | — | — | caught | caught | — |
+| 007-conditional-as-stated | — | — | — | — | — |
+| 008-inferred-attributes | — | — | — | — | — |
 
 > v1.8 and v1.9 add the `attribute-fidelity` and `stance-fidelity` invariants
 > and change no existing check, so earlier scores carry; the column stays "—"
-> until a blind run. **No case
+> until a blind run.
+>
+> Notes on 007 and 008: **designed traps written to defend the two v1.8/v1.9
+> invariants**, which shipped with no coverage. 007 baits a synthesis into
+> adding a conditional prediction and a statement about non-participants to one
+> real abandonment, and includes a legitimate 2-of-4 finding as a false-positive
+> guard. 008 contains no participant's gender, age, or rank anywhere, but is
+> seeded with cues that invite all three; it also states role and tenure, which
+> a correct run must carry rather than suppress. The field miss behind 008 came
+> from confidential transcripts that cannot live here, so this fixture is
+> reconstructed, not captured. Earlier columns are "—" because neither invariant
+> existed before v1.8. **No case
 > defends it yet.** The miss that motivated it came from a blind run on real,
 > confidential interview transcripts that cannot live in this public repo, so the
 > fixture has to be written from scratch: a short transcript set where nothing
