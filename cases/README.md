@@ -29,7 +29,7 @@ NNN-short-slug/
 
 ## Scoring log
 
-| Case | v1.3 | v1.4 | v1.5 | v1.6 | v1.8–1.9 |
+| Case | v1.3 | v1.4 | v1.5 | v1.6 | v1.9 |
 |------|------|------|------|------|------|
 | 001-outlier-as-theme | missed | caught | — | — | — |
 | 002-quantifier-overreach | missed | caught | — | — | — |
@@ -37,12 +37,14 @@ NNN-short-slug/
 | 004-fabricated-claim | missed | caught | — | — | — |
 | 005-coverage-overreach | missed | caught | — | — | — |
 | 006-second-order-audit | — | — | caught | caught | — |
-| 007-conditional-as-stated | — | — | — | — | — |
-| 008-inferred-attributes | — | — | — | — | — |
+| 007-conditional-as-stated | — | — | — | — | **caught** |
+| 008-inferred-attributes | — | — | — | — | **caught** |
 
-> v1.8 and v1.9 add the `attribute-fidelity` and `stance-fidelity` invariants
-> and change no existing check, so earlier scores carry; the column stays "—"
-> until a blind run.
+> v1.7 and v1.8 have no columns. v1.7 was licensing-only. v1.8 added
+> `attribute-fidelity` but was superseded by v1.9 within a day and never blind-run;
+> v1.9 contains it, so case 008's v1.9 score exercises it. Cases 001–006 stay "—"
+> under v1.9: it adds two invariants and changes no existing check, so v1.4's and
+> v1.6's scores carry until someone re-runs them.
 >
 > Notes on 007 and 008: **designed traps written to defend the two v1.8/v1.9
 > invariants**, which shipped with no coverage. 007 baits a synthesis into
@@ -58,14 +60,12 @@ NNN-short-slug/
 > confidential interview transcripts that cannot live in this public repo, so the
 > fixture has to be written from scratch: a short transcript set where nothing
 > states a participant's gender, age, or seniority, and the trap is a synthesis
-> that supplies one in passing prose. That is the next case to write.
+> that supplies one in passing prose. Written as case 008 and scored **caught** on a blind v1.9 run the same day (output in `008-inferred-attributes/runs/`).
 >
-> v1.9 shares that column: it adds `stance-fidelity` and likewise changes no
-> existing check. It has no case either, and it is the easier of the two to
-> fixture — a transcript set where one participant states a position outright
-> and another offers only a conditional version of it, with the trap being a
-> synthesis that reports them as a count of two. Write it alongside the
-> attribute-fidelity case.
+> `stance-fidelity` (v1.9) is defended by case 007, also scored **caught** on
+> the same blind run (output in `007-conditional-as-stated/runs/`). Both fixtures
+> carry a false-positive guard — a legitimate 2-of-4 count in 007, stated role
+> and tenure in 008 — and the run cleared both without over-firing.
 >
 > v1.7 has no column: it was a licensing-only release with no behavioral change
 > from v1.6, so v1.6's scores carry.
