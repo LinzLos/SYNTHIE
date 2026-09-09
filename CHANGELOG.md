@@ -3,9 +3,31 @@
 All notable changes to SYNTHIE are documented here. Versions track the script
 in `scripts/versions/`; `manifest.json` always points at the current release.
 
+## [1.8] — 2026-09-09
+
+- Current release. Adds the **`attribute-fidelity`** invariant, the sixth in the
+  set: describe a participant only by what the input states. Never infer or
+  supply gender, pronouns, age, seniority, employer, or location that is not in
+  the data — a name, a role, or a speech style is not evidence of any of them.
+  Refer to participants by id; where a pronoun is unavoidable and none is
+  stated, use they/them.
+- Applies to **every sentence of the write-up**, not only the ledger. The
+  failure it guards against arrives as a passing pronoun in prose, where the
+  other invariants — which check claims, counts, and quote ids — never look.
+- Wired in two places: the evidence ledger records a participant's attributes
+  only as stated, leaving unstated ones blank; the traceability check scans the
+  finished write-up for attributes the input never contained and replaces them
+  with the participant id.
+- Motivated by a field miss. The first blind run of the raw-transcript path on
+  real interview material (2026-09-09) was otherwise clean — correct counts,
+  correct attribution, honest coverage — but referred to one participant as
+  "she" twice, although no pronoun for that participant appears anywhere in the
+  transcript. Every other invariant passed it, because it was never a claim.
+- No change to the derived path or to any existing invariant.
+
 ## [1.7] — 2026-09-06
 
-- Licensing cleanup only — the repo moves from CC0 to **CC BY 4.0**, matching
+- Licensing cleanup — the repo moves from CC0 to **CC BY 4.0**, matching
   FLOWIE, and the script's attribution block now states that license (use,
   adapt, and share with credit). The former "please credit" line contradicted
   the CC0 LICENSE file, which waives attribution. No behavioral change from

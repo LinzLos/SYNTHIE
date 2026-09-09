@@ -1,4 +1,4 @@
-# 🧠 SYNTHIE v1.7
+# 🧠 SYNTHIE v1.8
 
 SYNTHIE is a structured, versioned, machine-readable reference that an agent reads to synthesize qualitative research — tagging quotes, mapping them to research questions, clustering themes, and producing stakeholder-ready findings **without presenting an insight the data doesn't support.**
 
@@ -9,6 +9,7 @@ The point isn't a clever one-off prompt. The synthesis logic lives in a repo as 
 A single structured script (`.xml` + `.txt`, see `manifest.json` for the current version) that an LLM or agent loads and runs over transcripts, notes, or mixed-methods data. Given raw research input, SYNTHIE:
 
 - **Builds an evidence ledger** — extracts candidate quotes with an id and a source/participant *first*, as the substrate every later claim must cite. Nothing gets asserted that isn't anchored here.
+- **Describes participants only as the data does** — the `attribute-fidelity` invariant bars inferred gender, pronouns, age, or seniority anywhere in the write-up, not just in cited claims.
 - **Enforces synthesis invariants** — the checks that make a synthesis trustworthy: every insight traces to a real quote (`evidence-traceability`), quotes stay attached to the right participant (`attribution-integrity`), strength language matches the count (`quantifier-parity`, so n=1 is never "users"), and a lone outlier is surfaced rather than promoted to a theme (`outlier-surfacing`).
 - **Runs a traceability check** — audits the finished synthesis against those invariants and downgrades or drops any claim that fails.
 - **Keeps coverage honest** — in multi-transcript mode, states how much of the input was actually analyzed and marks the rest unverified, instead of implying representativeness it can't back.
@@ -34,7 +35,7 @@ The `.xml` and `.txt` are the same script in two renderings — the `.txt` just 
 
 ## 🛠 Features
 
-- **Evidence ledger + invariants** — traceability, attribution integrity, quantifier↔count parity, outlier surfacing.
+- **Evidence ledger + invariants** — traceability, attribution integrity, attribute fidelity, quantifier↔count parity, outlier surfacing.
 - **Source-fidelity mode** — audit a derived synthesis (report, coded sheet, deck) with attribution trusted-not-verified and coverage scoped to the document.
 - **Traceability check + coverage-honesty pass** — no unsupported claims, no overstated coverage.
 - **Auditable evidence contract** — claim → count → quote ids.
