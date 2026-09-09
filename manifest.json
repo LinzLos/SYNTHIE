@@ -1,10 +1,10 @@
 {
   "tool": "SYNTHIE",
   "description": "Structured, LLM-native script for synthesizing qualitative research, mapping insights, and generating stakeholder-ready outputs.",
-  "current_version": "1.8",
+  "current_version": "1.9",
   "script": {
-    "xml": "scripts/versions/v1.8/SYNTHIE_v1.8.xml",
-    "txt": "scripts/versions/v1.8/SYNTHIE_v1.8.txt"
+    "xml": "scripts/versions/v1.9/SYNTHIE_v1.9.xml",
+    "txt": "scripts/versions/v1.9/SYNTHIE_v1.9.txt"
   },
   "versions_dir": "scripts/versions"
 }

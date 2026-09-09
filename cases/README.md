@@ -29,7 +29,7 @@ NNN-short-slug/
 
 ## Scoring log
 
-| Case | v1.3 | v1.4 | v1.5 | v1.6 | v1.8 |
+| Case | v1.3 | v1.4 | v1.5 | v1.6 | v1.8–1.9 |
 |------|------|------|------|------|------|
 | 001-outlier-as-theme | missed | caught | — | — | — |
 | 002-quantifier-overreach | missed | caught | — | — | — |
@@ -38,13 +38,21 @@ NNN-short-slug/
 | 005-coverage-overreach | missed | caught | — | — | — |
 | 006-second-order-audit | — | — | caught | caught | — |
 
-> v1.8 adds the `attribute-fidelity` invariant and changes no existing check, so
-> earlier scores carry; its column stays "—" until a blind v1.8 run. **No case
+> v1.8 and v1.9 add the `attribute-fidelity` and `stance-fidelity` invariants
+> and change no existing check, so earlier scores carry; the column stays "—"
+> until a blind run. **No case
 > defends it yet.** The miss that motivated it came from a blind run on real,
 > confidential interview transcripts that cannot live in this public repo, so the
 > fixture has to be written from scratch: a short transcript set where nothing
 > states a participant's gender, age, or seniority, and the trap is a synthesis
 > that supplies one in passing prose. That is the next case to write.
+>
+> v1.9 shares that column: it adds `stance-fidelity` and likewise changes no
+> existing check. It has no case either, and it is the easier of the two to
+> fixture — a transcript set where one participant states a position outright
+> and another offers only a conditional version of it, with the trap being a
+> synthesis that reports them as a count of two. Write it alongside the
+> attribute-fidelity case.
 >
 > v1.7 has no column: it was a licensing-only release with no behavioral change
 > from v1.6, so v1.6's scores carry.

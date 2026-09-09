@@ -3,9 +3,29 @@
 All notable changes to SYNTHIE are documented here. Versions track the script
 in `scripts/versions/`; `manifest.json` always points at the current release.
 
+## [1.9] — 2026-09-09
+
+- Current release. Adds the **`stance-fidelity`** invariant, the seventh in the
+  set: a conditional, hypothetical, or predicted statement is not the same
+  evidence as a stated position or an observed behaviour, and the two do not
+  sum. "This is a chore, I'll delete it" and "if it became a chore I'd use it
+  less" are one stated verdict and one conditional prediction — not two
+  participants who find it a chore.
+- Counts are split and printed as a split (`1 of 3 stated, 1 of 3 conditional`),
+  never merged into a total. The same separation applies when a participant
+  speaks for other people rather than themselves.
+- Wired in three places: `quantifier-parity` now notes that a count is only
+  honest if the things counted are the same kind of evidence; the traceability
+  check splits every count; the evidence contract prints the split.
+- Motivated by the same 2026-09-09 blind run as 1.8, which reported "feels like
+  a chore — 2 of 3" by adding one participant's stated verdict to another's
+  conditional. Quantifier-parity passed it, because the number was right — what
+  was wrong was that the two units were not the same kind of thing.
+- No change to the derived path or to any existing check.
+
 ## [1.8] — 2026-09-09
 
-- Current release. Adds the **`attribute-fidelity`** invariant, the sixth in the
+- Adds the **`attribute-fidelity`** invariant, the sixth in the
   set: describe a participant only by what the input states. Never infer or
   supply gender, pronouns, age, seniority, employer, or location that is not in
   the data — a name, a role, or a speech style is not evidence of any of them.
